@@ -6,7 +6,7 @@
 }
 @media screen and (max-width: 480px) {
   .backg{
-    background-image: url(/Andbg.png);
+    background-image: url(/Android2.png);
     background-size: cover;
     width: 100%;
     height: 100vh
