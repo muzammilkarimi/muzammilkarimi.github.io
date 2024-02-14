@@ -63,7 +63,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center ">
         <Image
-          src="/facecrop.jpg"
+          src="./facecrop.jpg"
           alt="Muzammil Ahmad Karimi"
           width={200}
           height={200}
