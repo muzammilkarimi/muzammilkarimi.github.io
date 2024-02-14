@@ -100,12 +100,12 @@ export default function Home() {
           <Instagram fontSize="large" />
         </Link>
 
-        <Button
+        <div
           onClick={copytoclipboard}
-          className="text-xl text-gray-300 p-0 hover:text-gray-700 duration-300"
+          className="text-xl text-gray-300 p-0 cursor-pointer hover:text-gray-700 duration-300"
         >
           <Mail fontSize="large" />
-        </Button>
+        </div>
         <Toaster />
       </div>
     </main>
