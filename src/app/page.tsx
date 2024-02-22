@@ -108,6 +108,7 @@ export default function Home() {
         </div>
         <Toaster />
       </div>
+      <div className="font-semibold" >Made with ❤️ by MAK</div>
     </main>
   );
 }
