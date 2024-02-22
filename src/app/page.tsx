@@ -42,8 +42,8 @@ export default function Home() {
     navigator.clipboard.writeText("muzammil.a.karimi@gmail.com");
   };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-evenly ">
-      <div className="text-gray-300 text-center flex w-72 justify-between font-bold">
+    <main className="flex min-h-screen flex-col items-center justify-evenly  ">
+      <div className="text-center flex w-72 justify-between font-bold">
         <div>
           <h2>{days}</h2>
           <p>Days</p>
@@ -63,7 +63,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center ">
         <Image
-          src="./facecrop.jpg"
+          src="./portfoliopic.jpg"
           alt="Muzammil Ahmad Karimi"
           width={200}
           height={200}
@@ -81,28 +81,28 @@ export default function Home() {
         <Link
           href="https://github.com/muzammilkarimi"
           target="_blank"
-          className="text-xl text-gray-300 hover:text-gray-700 duration-300"
+          className="text-xl  hover:text-gray-700 duration-300"
         >
           <GitHub fontSize="large" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/muzammilakarimi/"
           target="_blank"
-          className="text-xl text-gray-300 hover:text-gray-700 duration-300 "
+          className="text-xl  hover:text-blue-700 duration-300 "
         >
           <LinkedIn fontSize="large" />
         </Link>
         <Link
           href="https://www.instagram.com/muzammilkarimiiiii/"
           target="_blank"
-          className="text-xl text-gray-300 hover:text-gray-700 duration-300"
+          className="text-xl  hover:text-pink-700 duration-300"
         >
           <Instagram fontSize="large" />
         </Link>
 
         <div
           onClick={copytoclipboard}
-          className="text-xl text-gray-300 p-0 cursor-pointer hover:text-gray-700 duration-300"
+          className="text-xl p-0 cursor-pointer hover:text-green-700 duration-300"
         >
           <Mail fontSize="large" />
         </div>
