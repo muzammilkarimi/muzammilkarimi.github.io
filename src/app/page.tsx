@@ -67,7 +67,7 @@ export default function Home() {
           alt="Muzammil Ahmad Karimi"
           width={200}
           height={200}
-          className="rounded-full"
+          className="rounded-full border-4"
         />
         <h1 className="text-4xl font-bold mt-4 flex text-center ">
           Muzammil Ahmad Karimi
@@ -108,7 +108,11 @@ export default function Home() {
         </div>
         <Toaster />
       </div>
-      <div className="font-semibold" >Made with ❤️ by MAK</div>
+      <div className="flex flex-row gap-32">
+        <p>Ramadan Mubarak! 🌙</p>
+      <div className="font-semibold" >Made with ❤️ by MAK  (🇮🇳)</div>
+      </div>
+      
     </main>
   );
 }
