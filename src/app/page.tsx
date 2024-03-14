@@ -108,7 +108,7 @@ export default function Home() {
         </div>
         <Toaster />
       </div>
-      <div className="flex flex-row justify-evenly w-full">
+      <div className="flex flex-col lg:flex-row lg:justify-evenly w-full justify-center items-center gap-5">
         <p>Ramadan Mubarak! 🌙</p>
       <div className="font-semibold" >Made with ❤️ by MAK  🇮🇳</div>
       </div>
