@@ -108,9 +108,9 @@ export default function Home() {
         </div>
         <Toaster />
       </div>
-      <div className="flex flex-row gap-32">
+      <div className="flex flex-row justify-evenly w-full">
         <p>Ramadan Mubarak! 🌙</p>
-      <div className="font-semibold" >Made with ❤️ by MAK  (🇮🇳)</div>
+      <div className="font-semibold" >Made with ❤️ by MAK  🇮🇳</div>
       </div>
       
     </main>
