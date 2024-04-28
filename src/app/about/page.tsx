@@ -20,12 +20,12 @@ const About: React.FC = () => {
   return (
     <main className="flex flex-col items-center gap-3 md:gap-0 bg-black m-4 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
       <Navbar />
-      <div className=" md:mb-7 w-full h-screen bg-[#D9D9D9]  rounded-3xl flex gap-6 flex-col p-5 md:p-10">
+      <div className=" md:mb-7 w-full h-screen bg-[#D9D9D9]  rounded-3xl flex gap-6 flex-col p-3 md:p-10">
         <div className=" w-full mt-12 md:mt-0 h-screen bg-[url('/about_bg.png')] bg-cover bg-no-repeat bg-center rounded-3xl"></div>
       </div>
 
       {/* aboutme */}
-      <div className="bg-[#D9D9D9] md:p-10 p-7 rounded-3xl w-full flex flex-col gap-5 md:mb-7">
+      <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 md:mb-7">
         <div className="bg-[#004E83] p-1 rounded-md w-28 text-center">
           About me
         </div>
@@ -45,7 +45,7 @@ const About: React.FC = () => {
       </div>
       {/* education, exp and subjects*/}
       <div className="flex w-full gap-3 md:gap-7 flex-col md:flex-row md:mb-7">
-        <div className="bg-[#D9D9D9] md:p-10 p-7 rounded-3xl w-full flex flex-col gap-5">
+        <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5">
           <div className="bg-[#004E83] p-1 rounded-md w-28 text-center">
             Education
           </div>
@@ -91,7 +91,7 @@ const About: React.FC = () => {
           </div>
         </div>
         {/* Experience */}
-        <div className="bg-[#D9D9D9] md:p-10 p-7 rounded-3xl w-full flex flex-col gap-5">
+        <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5">
           <div className="bg-[#004E83] p-1 rounded-md w-28 text-center">
             Experience
           </div>
@@ -123,7 +123,7 @@ const About: React.FC = () => {
       </div>
 
       {/* cerfication */}
-      <div className="bg-[#D9D9D9] md:p-10 p-7 rounded-3xl w-full flex flex-col gap-5 md:mb-7">
+      <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 md:mb-7">
         <div className="bg-[#004E83] p-1 rounded-md w-28 text-center">
           Certification
         </div>
@@ -245,7 +245,7 @@ const About: React.FC = () => {
               />
             </div>
             <div>
-              <h1 className="relative z-10 text-5xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold mb-2">
+              <h1 className="relative z-10 text-5xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-bold mb-2">
                 Want to connect?
               </h1>
               <h1 className=" text-xs md:text-sm font-thin z-10 text-center">

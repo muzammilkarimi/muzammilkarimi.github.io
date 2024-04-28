@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center bg-black m-4 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
+    <main className="flex flex-col items-center bg-black m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
       <Navbar />
 
       <div className="bg-[#D9D9D9] w-full flex justify-center rounded-3xl items-center flex-col gap-8 p-2 pt-32 mb-7 md:mb-10 overflow-hidden">
@@ -421,7 +421,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <h1 className="relative z-10 text-5xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold mb-2">
+              <h1 className="relative z-10 text-5xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-bold mb-2">
                 Want to connect?
               </h1>
               <h1 className=" text-xs md:text-sm font-thin z-10 text-center">
