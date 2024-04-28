@@ -254,7 +254,7 @@ const About: React.FC = () => {
               </h1>
             </div>
           </div>
-          <div className="flex gap-7 justify-center relative z-10">
+          <div className="flex gap-7 justify-center relative z-10 flex-wrap">
             <div
               className="bg-white rounded-full bg-opacity-30 w-14 h-14 md:w-16 md:h-16 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] cursor-pointer hover:text-green-700 duration-300 "
               onClick={copytoclipboard}
