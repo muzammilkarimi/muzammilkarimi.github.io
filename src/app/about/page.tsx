@@ -18,7 +18,7 @@ const About: React.FC = () => {
     navigator.clipboard.writeText("muzammil.a.karimi@gmail.com");
   };
   return (
-    <main className="flex flex-col items-center gap-3 md:gap-0 bg-black m-4 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
+    <main className="flex flex-col items-center gap-3 md:gap-0 bg-black m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
       <Navbar />
       <div className=" md:mb-7 w-full h-screen bg-[#D9D9D9]  rounded-3xl flex gap-6 flex-col p-3 md:p-10">
         <div className=" w-full mt-12 md:mt-0 h-screen bg-[url('/about_bg.png')] bg-cover bg-no-repeat bg-center rounded-3xl"></div>

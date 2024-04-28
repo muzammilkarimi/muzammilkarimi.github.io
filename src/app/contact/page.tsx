@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
     navigator.clipboard.writeText("muzammil.a.karimi@gmail.com");
   };
   return (
-    <main className="flex flex-col items-center bg-black m-4 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
+    <main className="flex flex-col items-center gap-3 md:gap-0 bg-black m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
       <Navbar />
       {/* contact section */}
       <div className="h-[40rem] w-full rounded-3xl bg-[#D9D9D9] relative flex flex-col items-center justify-center antialiased">

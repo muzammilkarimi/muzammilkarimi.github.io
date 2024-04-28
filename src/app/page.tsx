@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center bg-black m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
+    <main className="flex flex-col items-center bg-black m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12 mt-5">
       <Navbar />
 
       <div className="bg-[#D9D9D9] w-full flex justify-center rounded-3xl items-center flex-col gap-8 p-2 pt-32 mb-7 md:mb-10 overflow-hidden">
@@ -321,7 +321,7 @@ export default function Home() {
             target="_blank"
             className="text-xl font-medium "
           >
-            <div className=" bg-white rounded-full bg-opacity-30 w-48 gap-5 h-14 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] text-[color:#ff914db9]">
+            <div className=" bg-white rounded-full bg-opacity-30 w-48 gap-5 h-14 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] text-white font-semibold">
               Github Link
               <GitHub fontSize="large" />
             </div>
@@ -359,7 +359,7 @@ export default function Home() {
             target="_blank"
             className="text-xl font-medium "
           >
-            <div className=" bg-white rounded-full bg-opacity-30 w-48 gap-5 h-14 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] text-[color:var(--blue)] ">
+            <div className=" bg-white rounded-full bg-opacity-30 w-48 gap-5 h-14 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] text-white ">
               Github Link
               <GitHub fontSize="large" className="" />
             </div>

@@ -9,6 +9,9 @@
   --blue: #004E83;
   --glasswhite: #ffffff 35%;
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
 .wave {
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
   animation-duration: 2.5s;        /* Change to speed up or slow down */
