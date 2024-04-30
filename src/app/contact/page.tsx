@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="flex gap-4 justify-center relative z-10 flex-wrap">
           <div
-                className="bg-white rounded-full w-14 h-14 md:w-16 md:h-16 flex justify-center items-center  cursor-pointer hover:text-green-700 duration-300 text-neutral-700 "
+                className="bg-white rounded-full w-12 h-12 md:w-16 md:h-16 flex justify-center items-center  cursor-pointer hover:text-green-700 duration-300 text-neutral-700 "
                 onClick={copytoclipboard}
               >
                 <Mail fontSize="large" />
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
                 target="_blank"
                 className="text-xl  hover:text-blue-700 duration-300 text-neutral-700"
               >
-                <div className="bg-white rounded-full  w-14 h-14 md:w-16 md:h-16 flex justify-center items-center">
+                <div className="bg-white rounded-full  w-12 h-12 md:w-16 md:h-16 flex justify-center items-center">
                   <LinkedIn fontSize="large" />
                 </div>
               </Link>
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
                 target="_blank"
                 className="text-xl  hover:text-gray-700 duration-300 text-neutral-700"
               >
-                <div className="bg-white rounded-full w-14 h-14 md:w-16 md:h-16 flex justify-center items-center ">
+                <div className="bg-white rounded-full w-12 h-12 md:w-16 md:h-16 flex justify-center items-center ">
                   <GitHub fontSize="large" />
                 </div>
               </Link>
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                 target="_blank"
                 className="text-xl  hover:text-pink-700 duration-300 text-neutral-700"
               >
-                <div className="bg-white rounded-full w-14 h-14 md:w-16 md:h-16 flex justify-center items-center ">
+                <div className="bg-white rounded-full w-12 h-12 md:w-16 md:h-16 flex justify-center items-center ">
                   <Instagram fontSize="large" />
                 </div>
               </Link>
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                 target="_blank"
                 className="text-xl  hover:text-red-700 duration-300 text-neutral-700"
               >
-                <div className="bg-white rounded-full w-14 h-14 md:w-16 md:h-16 flex justify-center items-center ">
+                <div className="bg-white rounded-full w-12 h-12 md:w-16 md:h-16 flex justify-center items-center ">
                   <YouTube fontSize="large" />
                 </div>
               </Link>

@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         }}
         className=" text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mx-auto "
       >
-        <div className="w-full flex justify-center rounded-3xl items-center flex-col gap-8 p-2 pt-32 mb-7 md:mb-10 relative">
+        <div className="w-full flex justify-center rounded-3xl items-center flex-col gap-8 p-2 pt-12 mb-7 md:mb-10 relative">
           <div className="rounded-full bg-neutral-200 items-center ">
             <Image
               className="rounded-full p-2"
