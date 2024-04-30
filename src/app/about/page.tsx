@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
 import Navbar from "../../components/navbar";
-import { BackgroundBeams } from "../../components/ui/background-beams";
+import Footer from "../../components/footer";
 import {
   LinkedIn,
   GitHub,
@@ -18,15 +18,16 @@ const About: React.FC = () => {
     navigator.clipboard.writeText("muzammil.a.karimi@gmail.com");
   };
   return (
-    <main className="flex flex-col items-center gap-3 md:gap-0 bg-black m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12">
+    <main className="flex flex-col items-center gap-3 md:gap-0 m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12 font-sans">
       <Navbar />
-      <div className=" md:mb-7 w-full h-screen bg-[#D9D9D9]  rounded-3xl flex gap-6 flex-col p-3 md:p-10">
-        <div className=" w-full mt-12 md:mt-0 h-screen bg-[url('/about_bg.png')] bg-cover bg-no-repeat bg-center rounded-3xl"></div>
+      <div className=" md:mb-7 w-full h-screen bg-white  rounded-3xl flex gap-6 flex-col p-3 md:p-10 dark:bg-black  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative items-center justify-center">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <div className=" w-full mt-12 md:mt-0 h-screen bg-[url('/about_bg.png')] bg-cover bg-no-repeat bg-center rounded-3xl z-0"></div>
       </div>
 
       {/* aboutme */}
-      <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 md:mb-7">
-        <div className="bg-[#004E83] p-1 rounded-md w-28 text-center">
+      <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 md:mb-7 border-2 border-black">
+        <div className="bg-neutral-800 p-1 rounded-md w-28 text-center text-white">
           About me
         </div>
         <p className="text-xl text-justify text-[color:var(--blue)]">
@@ -44,9 +45,9 @@ const About: React.FC = () => {
         </p>
       </div>
       {/* education, exp and subjects*/}
-      <div className="flex w-full gap-3 md:gap-7 flex-col md:flex-row md:mb-7">
-        <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5">
-          <div className="bg-[#004E83] p-1 rounded-md w-28 text-center">
+      <div className="flex w-full gap-3 md:gap-7 flex-col md:flex-row md:mb-7 ">
+        <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 border-2 border-black">
+          <div className="bg-neutral-800 p-1 rounded-md w-28 text-center text-white">
             Education
           </div>
           <div className="flex flex-col gap-9">
@@ -91,8 +92,8 @@ const About: React.FC = () => {
           </div>
         </div>
         {/* Experience */}
-        <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5">
-          <div className="bg-[#004E83] p-1 rounded-md w-28 text-center">
+        <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 border-2 border-black">
+          <div className="bg-neutral-800 p-1 rounded-md w-28 text-center text-white">
             Experience
           </div>
           {/* Intern */}
@@ -106,7 +107,7 @@ const About: React.FC = () => {
             <p className="font-semibold">New Delhi, India</p>
             <p>Python With Machine Learning</p>
           </div>
-          <div className="bg-[#004E83] p-1 rounded-md w-24 text-center">
+          <div className="bg-neutral-800 p-1 rounded-md w-24 text-center text-white">
             Subjects
           </div>
           <div className="flex w-full flex-col text-[color:var(--blue)]">
@@ -123,8 +124,8 @@ const About: React.FC = () => {
       </div>
 
       {/* cerfication */}
-      <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 md:mb-7">
-        <div className="bg-[#004E83] p-1 rounded-md w-28 text-center">
+      <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 md:mb-7 border-2 border-black">
+        <div className="bg-neutral-800 p-1 rounded-md w-28 text-center text-white">
           Certification
         </div>
         <div className="flex w-full flex-col text-[color:var(--blue)] gap-7">
@@ -232,84 +233,8 @@ const About: React.FC = () => {
         </div>
       </div>
       {/* contact section */}
-      <div className="h-[40rem] w-full rounded-3xl bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-        <div className=" mx-auto p-4 gap-10 flex flex-col">
-          <div className="flex flex-col justify-center items-center gap-10 ">
-            <div className="rounded-full flex justify-center bg-gradient-to-b from-neutral-200 to-neutral-600 w-32 md:w-40 relative z-10 items-center ">
-              <Image
-                className="rounded-full p-2"
-                alt="MAK photo"
-                src="/facecrop.jpg"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div>
-              <h1 className="relative z-10 text-5xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-bold mb-2">
-                Want to connect?
-              </h1>
-              <h1 className=" text-xs md:text-sm font-thin z-10 text-center">
-                I’m a computer science student who enjoys creating, exploring,
-                and improving.
-              </h1>
-            </div>
-          </div>
-          <div className="flex gap-7 justify-center relative z-10 flex-wrap">
-            <div
-              className="bg-white rounded-full bg-opacity-30 w-14 h-14 md:w-16 md:h-16 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] cursor-pointer hover:text-green-700 duration-300 "
-              onClick={copytoclipboard}
-            >
-              <Mail fontSize="large" />
-            </div>
-            <Toaster />
-            <Link
-              href="https://www.linkedin.com/in/muzammilakarimi/"
-              target="_blank"
-              className="text-xl  hover:text-blue-700 duration-300 "
-            >
-              <div className="bg-white rounded-full bg-opacity-30 w-14 h-14 md:w-16 md:h-16 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] ">
-                <LinkedIn fontSize="large" />
-              </div>
-            </Link>
-            <Link
-              href="https://github.com/muzammilkarimi"
-              target="_blank"
-              className="text-xl  hover:text-gray-700 duration-300"
-            >
-              <div className="bg-white rounded-full bg-opacity-30 w-14 h-14 md:w-16 md:h-16 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] ">
-                <GitHub fontSize="large" />
-              </div>
-            </Link>
-            <Link
-              href="https://www.instagram.com/muzammilkarimiiiii/"
-              target="_blank"
-              className="text-xl  hover:text-pink-700 duration-300"
-            >
-              <div className="bg-white rounded-full bg-opacity-30 w-14 h-14 md:w-16 md:h-16 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] ">
-                <Instagram fontSize="large" />
-              </div>
-            </Link>
-            <Link
-              href="https://www.youtube.com/@MuzammilAhmadKarimi"
-              target="_blank"
-              className="text-xl  hover:text-red-700 duration-300"
-            >
-              <div className="bg-white rounded-full bg-opacity-30 w-14 h-14 md:w-16 md:h-16 flex justify-center items-center shadow-[inset_0px_4px_4px_0px_#0003] drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)] ">
-                <YouTube fontSize="large" />
-              </div>
-            </Link>
-          </div>
-        </div>
-        <div className="flex justify-between w-full font-thin text-thin absolute bottom-4 pl-10 pr-10 text-neutral-400">
-          <h1>
-            <strong>@INDIA</strong>
-          </h1>
-          <h1>
-            Made with ❤️ by <strong>MAK</strong>
-          </h1>
-        </div>
-        <BackgroundBeams />
-      </div>
+      <Footer/>
+      
     </main>
   );
 };
