@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Button } from "./ui/moving-border";
 import { IoDocumentText } from "react-icons/io5";
 import Link from "next/link";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+
 import {
   LinkedIn,
   GitHub,
@@ -14,6 +16,21 @@ import {
 } from "@mui/icons-material";
 
 const Hero: React.FC = () => {
+  const [typewriterText] = useTypewriter({
+    words: [
+      "Aspiring Computer Science student",
+      "GATE CS'24 qualified",
+      "Web Developer",
+      "AI Enthusiast",
+      "UI/UX Designer",
+      "Graphic Designer",
+      "Story teller",
+    ],
+    loop: 0,
+    typeSpeed: 100,
+    deleteSpeed: 40,
+    delaySpeed: 2000,
+  });
   return (
     <HeroHighlight>
       <motion.h1
@@ -48,10 +65,9 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-center text-[color:var(--blue)] tracking-wide">
               Muzammil Ahmad Karimi
             </h1>
-            <Highlight className="text-black p-2">
-              <p className="text-center text-xs md:text-lg text-[color:var(--blue)] uppercase font-light font-sans ">
-                Aspiring <strong>Computer Science</strong> student |
-                <span className="font-bold"> gate cs&apos;24 qualified</span>
+            <Highlight className="text-black p-2 h-12 text-center items-center">
+              <p className="text-center text-sm md:text-lg text-[color:var(--blue)] uppercase font-semibold font-sans ">
+                <span>{typewriterText}</span>
               </p>
             </Highlight>
           </div>
