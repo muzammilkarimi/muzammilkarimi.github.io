@@ -65,8 +65,8 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-center text-[color:var(--blue)] tracking-wide">
               Muzammil Ahmad Karimi
             </h1>
-            <Highlight className="text-black p-2 h-12 text-center items-center">
-              <p className="text-center text-sm md:text-lg text-[color:var(--blue)] uppercase font-semibold font-sans ">
+            <Highlight className="text-black p-2 h-10 md:h-12 items-center">
+              <p className="text-center text-md md:text-lg text-[color:var(--blue)] uppercase font-semibold font-sans ">
                 <span>{typewriterText}</span>
               </p>
             </Highlight>
