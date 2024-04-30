@@ -59,7 +59,7 @@ export default function Home() {
 
         {/* greeting section */}
 
-        <div className=" w-full flex justify-center rounded-3xl items-center flex-col p-5 text-3xl md:text-5xl  my-10 tracking-wide text-neutral-700">
+        <div className=" w-full flex justify-center rounded-3xl items-center flex-col p-5 text-2xl md:text-5xl  my-10 tracking-wide text-neutral-700">
           <h1>Guide us to the straight path</h1>
           <p className="text-sm font-thin font-sans">AL FATIHA 6</p>
         </div>

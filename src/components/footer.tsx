@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 />
               </div>
               <div>
-                <h1 className="relative z-10 text-5xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-700  text-center font-bold mb-2">
+                <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-700  text-center font-bold mb-2">
                   Want to connect?
                 </h1>
                 <h1 className=" text-xs md:text-sm font-thin font-sans z-10 text-neutral-400 text-center">
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                 </h1>
               </div>
             </div>
-            <div className="flex gap-7 justify-center relative z-10 flex-wrap">
+            <div className="flex gap-5 justify-center relative z-10 flex-wrap">
               <div
                 className="bg-white rounded-full w-14 h-14 md:w-16 md:h-16 flex justify-center items-center  cursor-pointer hover:text-green-700 duration-300 text-neutral-700 "
                 onClick={copytoclipboard}

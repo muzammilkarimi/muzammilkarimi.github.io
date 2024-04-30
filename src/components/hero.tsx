@@ -48,12 +48,12 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-center text-[color:var(--blue)] tracking-wide">
               Muzammil Ahmad Karimi
             </h1>
-            <p className="text-center text-sm md:text-md text-[color:var(--blue)] uppercase font-light font-sans ">
-              <Highlight className="text-black p-2">
+            <Highlight className="text-black p-2">
+              <p className="text-center text-xs md:text-lg text-[color:var(--blue)] uppercase font-light font-sans ">
                 Aspiring <strong>Computer Science</strong> student |
                 <span className="font-bold"> gate cs&apos;24 qualified</span>
-              </Highlight>
-            </p>
+              </p>
+            </Highlight>
           </div>
           <div className="flex gap-5 justify-center items-center mb-5">
             <Button
