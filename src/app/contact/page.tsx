@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
               </h1>
             </div>
           </div>
-          <div className="flex gap-5 justify-center relative z-10 flex-wrap">
+          <div className="flex gap-4 justify-center relative z-10 flex-wrap">
           <div
                 className="bg-white rounded-full w-14 h-14 md:w-16 md:h-16 flex justify-center items-center  cursor-pointer hover:text-green-700 duration-300 text-neutral-700 "
                 onClick={copytoclipboard}
