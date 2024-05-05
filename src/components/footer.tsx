@@ -12,6 +12,7 @@ import {
     YouTube,
   } from "@mui/icons-material";
 import { BackgroundBeams } from "../components/ui/background-beams";
+import {IN} from 'country-flag-icons/react/3x2';
 const Footer: React.FC = () => {
     const copytoclipboard = () => {
         toast.success("Email Id copied!");
@@ -87,9 +88,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-between w-full font-thin text-thin absolute bottom-4  text-white px-7 font-sans">
-            <h1>
-              <strong>@INDIA</strong>
-            </h1>
+            
+            <IN  className="w-5 h-5"/>
             <h1>
               Made with ❤️ by <strong>MAK</strong>
             </h1>

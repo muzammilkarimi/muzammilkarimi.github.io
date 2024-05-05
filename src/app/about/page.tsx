@@ -54,26 +54,26 @@ const About: React.FC = () => {
             {/* vels university */}
             <div className="flex w-full flex-col text-[color:var(--blue)]">
               <div className="flex justify-between w-full items-end md:gap-10">
-                <h1 className="text-3xl md:text-4xl uppercase font-semibold">
+                <h1 className="text-2xl md:text-4xl uppercase font-semibold">
                   Vels University
                 </h1>
                 <p>2021-2024</p>
               </div>
               <p className="font-semibold">Chennai, India</p>
-              <p>
+              <p className="text-sm md:text-lg">
                 Bachelor of Engineering in <strong>Computer Science</strong>
               </p>
             </div>
             {/* BTE */}
             <div className="flex w-full flex-col text-[color:var(--blue)]">
               <div className="flex justify-between w-full items-end md:gap-10">
-                <h1 className="text-3xl md:text-4xl uppercase font-semibold">
+                <h1 className="text-2xl md:text-4xl uppercase font-semibold">
                   BTE DELHI
                 </h1>
                 <p>2017-2020</p>
               </div>
               <p className="font-semibold">New Delhi, India</p>
-              <p>
+              <p className="text-sm md:text-lg">
                 Diploma Engineering in <strong>Computer Science</strong>
               </p>
             </div>
@@ -81,13 +81,13 @@ const About: React.FC = () => {
             {/* BSEB */}
             <div className="flex w-full flex-col text-[color:var(--blue)]">
               <div className="flex justify-between w-full items-end md:gap-10">
-                <h1 className="text-3xl md:text-4xl uppercase font-semibold">
+                <h1 className="text-2xl md:text-4xl uppercase font-semibold">
                   BSEB
                 </h1>
                 <p>2016-2017</p>
               </div>
               <p className="font-semibold">Bihar, India</p>
-              <p>Matriculation</p>
+              <p className="text-sm md:text-lg">Matriculation</p>
             </div>
           </div>
         </div>
@@ -99,13 +99,13 @@ const About: React.FC = () => {
           {/* Intern */}
           <div className="flex w-full flex-col text-[color:var(--blue)]">
             <div className="flex justify-between w-full items-end md:gap-10">
-              <h1 className="text-3xl md:text-4xl uppercase font-semibold">
+              <h1 className="text-2xl md:text-4xl uppercase font-semibold">
                 Tech Explica
               </h1>
               <p>2020</p>
             </div>
             <p className="font-semibold">New Delhi, India</p>
-            <p>Python With Machine Learning</p>
+            <p className="text-sm md:text-lg">Python With Machine Learning</p>
           </div>
           <div className="bg-neutral-800 p-1 rounded-md w-24 text-center text-white">
             Subjects
