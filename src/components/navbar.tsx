@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 const Navbar: React.FC = () => {
-  let [hoveredIndex, setHoveredIndex] = useState(null);
+  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   let links = [
     {
       name: "Home",
