@@ -48,6 +48,15 @@ export default function Home() {
     <div className="">
       <main className="flex flex-col items-center m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12 mt-5">
         <Navbar />
+        <div className="absolute z-10 invisible md:visible  top-10 left-6 flex justify-start">
+          <Image
+            className=""
+            alt="MAK photo"
+            src="/meem logo.png"
+            width={50}
+            height={50}
+          />
+        </div>
         <div className="z-0 w-full relative mt-10">
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-10"></div>
 
@@ -258,7 +267,7 @@ export default function Home() {
                 <span className="bg-neutral-700 px-1 rounded-md">
                   Prisma Client,
                 </span>{" "}
-                and{" "}
+                &{" "}
                 <span className="bg-neutral-700 px-1 rounded-md">
                   PostgreSQL.
                 </span>
@@ -307,7 +316,7 @@ export default function Home() {
                 <span className="bg-neutral-800 px-1 rounded-md">
                   XAMMPP server
                 </span>{" "}
-                and <span className="bg-neutral-800 px-1 rounded-md">SQL.</span>
+                & <span className="bg-neutral-800 px-1 rounded-md">SQL.</span>
                 🚀
               </p>
             </div>
@@ -324,8 +333,11 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        {/* widgets */}
 
+        
         {/* contact section */}
+        
         <Footer />
       </main>
     </div>
