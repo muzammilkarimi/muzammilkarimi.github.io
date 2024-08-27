@@ -20,8 +20,8 @@ const About: React.FC = () => {
   return (
     <main className="flex flex-col items-center gap-3 md:gap-0 m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12 font-sans">
       <Navbar />
-      <div className=" md:mb-7 w-full h-screen bg-white  rounded-3xl flex gap-6 flex-col p-3 md:p-10 dark:bg-black  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative items-center justify-center">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className=" md:mb-7 w-full h-screen bg-white  rounded-3xl flex gap-6 flex-col p-3 md:p-10 dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative items-center justify-center">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className=" w-full mt-12 md:mt-0 h-screen bg-[url('/about_bg.png')] bg-cover bg-no-repeat bg-center rounded-3xl z-0"></div>
       </div>
 
@@ -51,6 +51,19 @@ const About: React.FC = () => {
             Education
           </div>
           <div className="flex flex-col gap-9">
+            {/* IIT PATNA */}
+            <div className="flex w-full flex-col text-[color:var(--blue)]">
+              <div className="flex justify-between w-full items-end md:gap-10">
+                <h1 className="text-2xl md:text-4xl uppercase font-semibold">
+                  IIT Patna
+                </h1>
+                <p>2024-2026</p>
+              </div>
+              <p className="font-semibold">Patna, India</p>
+              <p className="text-sm md:text-lg">
+              Master of Technology in <strong>Mathematics and Computing</strong>
+              </p>
+            </div>
             {/* vels university */}
             <div className="flex w-full flex-col text-[color:var(--blue)]">
               <div className="flex justify-between w-full items-end md:gap-10">
@@ -100,12 +113,12 @@ const About: React.FC = () => {
           <div className="flex w-full flex-col text-[color:var(--blue)]">
             <div className="flex justify-between w-full items-end md:gap-10">
               <h1 className="text-2xl md:text-4xl uppercase font-semibold">
-                Tech Explica
+                Tech Explica <span className="text-sm md:text-lg">(Intern)</span>
               </h1>
               <p>2020</p>
             </div>
             <p className="font-semibold">New Delhi, India</p>
-            <p className="text-sm md:text-lg">Python With Machine Learning</p>
+            <p className="text-sm md:text-lg">Python With Machine Learning (45 Days)</p>
           </div>
           <div className="bg-neutral-800 p-1 rounded-md w-24 text-center text-white">
             Subjects
@@ -233,8 +246,7 @@ const About: React.FC = () => {
         </div>
       </div>
       {/* contact section */}
-      <Footer/>
-      
+      <Footer />
     </main>
   );
 };

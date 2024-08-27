@@ -18,6 +18,7 @@ import {
 const Hero: React.FC = () => {
   const [typewriterText] = useTypewriter({
     words: [
+      "MTech @ IIT Patna",
       "Computer Science student",
       "GATE CS'24 qualified",
       "Web Developer",

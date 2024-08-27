@@ -18,6 +18,8 @@ import {
   FaPython,
   FaNodeJs,
   FaReact,
+  FaArrowCircleRight,
+  FaLongArrowAltRight,
 } from "react-icons/fa";
 import {
   SiCanva,
@@ -40,6 +42,7 @@ import { DiMysql } from "react-icons/di";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
+import Widgets from "../components/widgets";
 
 export default function Home() {
   // cpp c python html js css tailwindcss react js node js express js mongo db sql nextjs
@@ -333,11 +336,21 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        {/* widgets */}
 
-        
+        {/* about me btn */}
+        <div className="w-full flex justify-center gap-5 mt-10 ">
+          <Link href="/about">
+            <button className=" p-2 rounded-3xl w-40 font-semibold font-sans flex justify-center items-center gap-3 hover:gap-5 duration-300 border-2 border-black">
+              ABOUT ME
+              <FaLongArrowAltRight size={20} />
+            </button>
+          </Link>
+        </div>
+
+        {/* widgets */}
+        <Widgets /> 
         {/* contact section */}
-        
+
         <Footer />
       </main>
     </div>
