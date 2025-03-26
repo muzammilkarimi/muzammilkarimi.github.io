@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
               </Link>
               <div className="">
                 <Link
-                  href="https://www.linkedin.com/in/muzammilakarimi/"
+                  href="https://www.linkedin.com/in/makarimi01/"
                   target="_blank"
                   className="text-xl  hover:text-blue-700 duration-300 "
                 >
