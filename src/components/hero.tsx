@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
               </Highlight>
             </div>
             <div className="flex gap-5 justify-center items-center mb-5">
-              <Link href={"https://drive.google.com/file/d/1q56oHUzG8vGaP6l6zFkkrQ-DQT3H-O4n/view?usp=sharing"} target="_blank">
+              <Link href={"https://drive.google.com/file/d/1f38JQjDn6r8jH4yEmbiPoR0BS23aODFG/view?usp=sharing"} target="_blank">
                 <Button
                   borderRadius="1.75rem"
                   className="bg-neutral-100 flex justify-center gap-5 font-sans text-black border-neutral-200 hover:border-black border-2 duration-300"
