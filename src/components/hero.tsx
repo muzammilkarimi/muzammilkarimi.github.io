@@ -6,13 +6,11 @@ import { Button } from "./ui/moving-border";
 import { IoDocumentText } from "react-icons/io5";
 import Link from "next/link";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-
 import {
   LinkedIn,
   GitHub,
   Instagram,
-  Mail,
-  YouTube,
+  Email,
 } from "@mui/icons-material";
 
 const Hero: React.FC = () => {
@@ -28,80 +26,94 @@ const Hero: React.FC = () => {
       "Story teller",
     ],
     loop: 0,
-    typeSpeed: 100,
+    typeSpeed: 80,
     deleteSpeed: 40,
-    delaySpeed: 2000,
+    delaySpeed: 1500,
   });
+
   return (
-    <>
-      <HeroHighlight>
-        <motion.h1
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: [20, -5, 0],
-          }}
-          transition={{
-            duration: 0.5,
-            ease: [0.4, 0.0, 0.2, 1],
-          }}
-          className=" text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mx-auto "
+    <HeroHighlight containerClassName="h-[40rem] flex items-center justify-center bg-white dark:bg-black group">
+      <div className="relative z-20 flex flex-col items-center justify-center max-w-5xl mx-auto px-4 text-center">
+        
+        {/* Subtle Background Glow behind text */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[100px] -z-10 group-hover:bg-blue-500/20 transition-colors duration-1000" />
+
+        {/* Profile Image - Clean & Floating */}
+        <motion.div
+           initial={{ opacity: 0, scale: 0.8 }}
+           animate={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
+           className="mb-8 relative"
         >
-          <div className="w-full flex justify-center rounded-3xl items-center flex-col gap-8 p-2 pt-12 mb-7 md:mb-10 relative">
-            <div className="rounded-full bg-neutral-200 items-center ">
-              <Image
-                className="rounded-full p-2"
-                alt="MAK photo"
-                src="/facecrop.jpg"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="gap-3 flex flex-col ">
-              <p className="text-[color:var(--blue)] font-sans">
-                <span className="wave text-3xl">👋🏽 </span> Hello I&apos;m
-              </p>
-              <h1 className="text-4xl md:text-6xl font-bold text-center text-neutral-700 tracking-wide">
-                Muzammil Ahmad Karimi
-              </h1>
-              <Highlight className="text-black p-2 h-10 md:h-12 items-center">
-                <p className="text-center text-md md:text-lg text-[color:var(--blue)] uppercase font-sans ">
-                  <span>{typewriterText}</span>
-                </p>
-              </Highlight>
-            </div>
-            <div className="flex gap-5 justify-center items-center mb-5">
-              <Link href={"https://drive.google.com/file/d/1y6rJjJQioGgQGyVH49h8yPgUoiaNfU-9/view?usp=sharing"} target="_blank">
-                <Button
-                  borderRadius="1.75rem"
-                  className="bg-neutral-100 flex justify-center gap-5 font-sans text-black border-neutral-200 hover:border-black border-2 duration-300"
-                >
-                  <h1 className="text-base">Resume</h1>
-                  <IoDocumentText size={30} />
-                </Button>
-              </Link>
-              <div className="">
-                <Link
-                  href="https://www.linkedin.com/in/makarimi01/"
-                  target="_blank"
-                  className="text-xl  hover:text-blue-700 duration-300 "
-                >
-                  <div className="text-black">
-                    <LinkedIn fontSize="large" />
-                  </div>
-                </Link>
-              </div>
-            </div>
+          <div className="w-28 h-28 md:w-32 md:h-32 relative rounded-full overflow-hidden border-2 border-neutral-100 dark:border-neutral-800 shadow-xl ring-4 ring-white/50 dark:ring-neutral-900/50">
+            <Image 
+              src="/facecrop.jpg" 
+              alt="Muzammil Ahmad Karimi" 
+              fill 
+              className="object-cover"
+            />
           </div>
-          {/* <Highlight className="text-black dark:text-white">
-          Muzammil Ahmad Karimi
-        </Highlight> */}
-        </motion.h1>
-      </HeroHighlight>
-    </>
+        </motion.div>
+
+        {/* Typography - Modern & Sleek */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="space-y-6"
+        >
+          <div className="flex flex-col items-center gap-2">
+             <h2 className="text-xs md:text-sm font-bold tracking-[0.3em] text-neutral-500 dark:text-neutral-400">
+               Hi, I'm
+             </h2>
+             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-neutral-800 dark:text-white tracking-tighter mix-blend-multiply dark:mix-blend-normal">
+               Muzammil <span className="text-neutral-400 dark:text-neutral-600">Karimi</span>
+             </h1>
+          </div>
+          
+          {/* Typewriter - Monospaced & Tech-focused */}
+          <div className="h-6 md:h-8 flex items-center justify-center">
+            <span className="text-sm md:text-lg font-mono text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full">
+              {typewriterText}
+              <Cursor cursorColor="#3B82F6" />
+            </span>
+          </div>
+        </motion.div>
+
+        {/* Minimalist Action Bar */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex flex-col md:flex-row items-center gap-4 mt-10"
+        >
+           <Link href="https://drive.google.com/file/d/1y6rJjJQioGgQGyVH49h8yPgUoiaNfU-9/view?usp=sharing" target="_blank">
+            <button className="px-6 py-3 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold text-sm hover:scale-105 transition-transform shadow-lg flex items-center gap-2">
+               Resume <IoDocumentText />
+            </button>
+           </Link>
+
+           <div className="flex items-center gap-2 px-4 py-2 bg-neutral-100 dark:bg-neutral-900 rounded-full border border-neutral-200 dark:border-neutral-800">
+              <Link href="https://github.com/muzammilkarimi" target="_blank" className="p-2 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors">
+                 <GitHub fontSize="small" />
+              </Link>
+              <div className="w-[1px] h-4 bg-neutral-300 dark:bg-neutral-700" />
+              <Link href="https://www.linkedin.com/in/makarimi01/" target="_blank" className="p-2 text-neutral-600 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-blue-500 transition-colors">
+                 <LinkedIn fontSize="small" />
+              </Link>
+              <div className="w-[1px] h-4 bg-neutral-300 dark:bg-neutral-700" />
+              <Link href="https://instagram.com/muzammil_karimi" target="_blank" className="p-2 text-neutral-600 hover:text-pink-600 dark:text-neutral-400 dark:hover:text-pink-500 transition-colors">
+                 <Instagram fontSize="small" />
+              </Link>
+              <div className="w-[1px] h-4 bg-neutral-300 dark:bg-neutral-700" />
+              <Link href="mailto:muzammil.a.karimi@gmail.com" className="p-2 text-neutral-600 hover:text-red-500 dark:text-neutral-400 dark:hover:text-red-400 transition-colors">
+                 <Email fontSize="small" />
+              </Link>
+           </div>
+        </motion.div>
+
+      </div>
+    </HeroHighlight>
   );
 };
 export default Hero;

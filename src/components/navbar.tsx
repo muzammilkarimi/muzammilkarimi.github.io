@@ -19,31 +19,25 @@ const Navbar: React.FC = () => {
     
   ];
   return (
-    <nav className="flex justify-center z-10 font-sans">
-      <div className="fixed top-8 w-80 h-12 rounded-3xl bg-white border-2 border-neutral-500 items-center text-center flex justify-center m-0 p-0">
+    <nav className="flex justify-center z-50 font-sans">
+      <div className="fixed top-6 w-fit h-12 px-6 rounded-full bg-white/70 dark:bg-black/70 backdrop-blur-xl border border-neutral-200 dark:border-white/10 flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow duration-300">
         {links.map((navLink, index) => (
         <Link key={navLink.name} href={navLink.link}>
           <div
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="relative px-5 py-3 text-sm text-gray-700 transition-all delay-150 hover:text-gray-900"
+            className="relative text-sm font-medium text-neutral-600 dark:text-neutral-300 transition-colors hover:text-black dark:hover:text-white"
           >
-            <AnimatePresence>
-              {hoveredIndex === index && (
-                <motion.span
-                  className="absolute inset-0 bg-gray-100"
-                  layoutId="hoverBackground"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, transition: { duration: 0.15 } }}
-                  exit={{
-                    opacity: 0,
-                    transition: { duration: 0.15, delay: 0.2 },
-                  }}
-                />
-              )}
-            </AnimatePresence>
-
             <span className="relative z-10">{navLink.name}</span>
+            {hoveredIndex === index && (
+              <motion.div
+                className="absolute -bottom-1 left-0 right-0 h-[2px] bg-blue-600 rounded-full"
+                layoutId="underline"
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 0.2 }}
+              />
+            )}
           </div>
         </Link>
       ))}

@@ -1,253 +1,174 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import toast, { Toaster } from "react-hot-toast";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import {
-  LinkedIn,
-  GitHub,
-  Instagram,
-  Mail,
-  YouTube,
-} from "@mui/icons-material";
+  FaGraduationCap,
+  FaTrophy,
+  FaLightbulb,
+  FaExternalLinkAlt,
+  FaCertificate, 
+  FaUniversity
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+
 const About: React.FC = () => {
-  const copytoclipboard = () => {
-    toast.success("Email Id copied!");
-    navigator.clipboard.writeText("muzammil.a.karimi@gmail.com");
-  };
   return (
-    <main className="flex flex-col items-center gap-3 md:gap-0 m-2 md:m-7 mr:4 ml:4 md:mr-12 md:ml-12 font-sans">
+    <div className="relative min-h-screen bg-white dark:bg-neutral-950 overflow-x-hidden selection:bg-blue-500 selection:text-white font-sans">
       <Navbar />
-      <div className=" md:mb-7 w-full h-screen bg-white  rounded-3xl flex gap-6 flex-col p-3 md:p-10 dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative items-center justify-center">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        <div className=" w-full mt-12 md:mt-0 h-screen bg-[url('/about_bg.png')] bg-cover bg-no-repeat bg-center rounded-3xl z-0"></div>
-      </div>
+      
+      <main className="w-full max-w-5xl mx-auto px-6 pt-32 pb-20">
+        
+        {/* Header Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 text-center"
+        >
+          <span className="text-blue-600 dark:text-blue-500 font-bold tracking-widest uppercase text-xs">The Profile</span>
+          <h1 className="text-4xl md:text-7xl font-black text-neutral-900 dark:text-white tracking-tighter uppercase mt-4 mb-6">
+            Architecting <span className="text-neutral-400">Intelligence.</span>
+          </h1>
+          <p className="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed font-medium">
+             I am <strong className="text-neutral-900 dark:text-white">Muzammil Ahmad Karimi</strong>, an M.Tech scholar at <span className="text-blue-600">IIT Patna</span> bridging the gap between advanced mathematical theory and practical AI deployment.
+          </p>
+        </motion.div>
 
-      {/* aboutme */}
-      <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 md:mb-7 border-2 border-black">
-        <div className="bg-neutral-800 p-1 rounded-md w-28 text-center text-white">
-          About me
-        </div>
-        <p className="text-xl text-justify text-[color:var(--blue)]">
-          Hello! I’m <strong> MUZAMMIL AHMAD KARIMI</strong>, a passionate
-          Computer Science student with a penchant for problem-solving and
-          innovation. My journey in the world of code began with simple “Hello,
-          World!” programs, and since then, I’ve been on an exciting quest to
-          explore algorithms, data structures, and software development. Whether
-          it’s crafting elegant Python scripts or diving into the intricacies of
-          web development, I thrive on turning ideas into functional, efficient
-          solutions. When I’m not typing away at my keyboard, you’ll find me
-          sipping coffee, debugging, and occasionally indulging in a good sci-fi
-          movies. Welcome to my digital playground, where lines of code come to
-          life! 🚀
-        </p>
-      </div>
-      {/* education, exp and subjects*/}
-      <div className="flex w-full gap-3 md:gap-7 flex-col md:flex-row md:mb-7 ">
-        <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 border-2 border-black">
-          <div className="bg-neutral-800 p-1 rounded-md w-28 text-center text-white">
-            Education
-          </div>
-          <div className="flex flex-col gap-9">
-            {/* IIT PATNA */}
-            <div className="flex w-full flex-col text-[color:var(--blue)]">
-              <div className="flex justify-between w-full items-end md:gap-10">
-                <h1 className="text-2xl md:text-4xl uppercase font-semibold">
-                  IIT Patna
-                </h1>
-                <p>2024-2026</p>
-              </div>
-              <p className="font-semibold">Patna, India</p>
-              <p className="text-sm md:text-lg">
-              Master of Technology in <strong>Mathematics and Computing</strong>
-              </p>
-            </div>
-            {/* vels university */}
-            <div className="flex w-full flex-col text-[color:var(--blue)]">
-              <div className="flex justify-between w-full items-end md:gap-10">
-                <h1 className="text-2xl md:text-4xl uppercase font-semibold">
-                  Vels University
-                </h1>
-                <p>2021-2024</p>
-              </div>
-              <p className="font-semibold">Chennai, India</p>
-              <p className="text-sm md:text-lg">
-                Bachelor of Engineering in <strong>Computer Science</strong>
-              </p>
-            </div>
-            {/* BTE */}
-            <div className="flex w-full flex-col text-[color:var(--blue)]">
-              <div className="flex justify-between w-full items-end md:gap-10">
-                <h1 className="text-2xl md:text-4xl uppercase font-semibold">
-                  BTE DELHI
-                </h1>
-                <p>2017-2020</p>
-              </div>
-              <p className="font-semibold">New Delhi, India</p>
-              <p className="text-sm md:text-lg">
-                Diploma Engineering in <strong>Computer Science</strong>
-              </p>
-            </div>
+        {/* Hero Image / Banner */}
+        <motion.div 
+           initial={{ opacity: 0, scale: 0.95 }}
+           animate={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 0.8 }}
+           className="w-full h-[400px] rounded-[2.5rem] overflow-hidden relative mb-20 group"
+        >
+           <div className="absolute inset-0 bg-neutral-900" />
+           {/* Abstract Gradient Overlay */}
+           <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-neutral-900/80 to-transparent z-10" />
+           
+           {/* Placeholder for specific imagery if needed, keeping it abstract for now */}
+           <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] animate-pulse" />
+           </div>
 
-            {/* BSEB */}
-            <div className="flex w-full flex-col text-[color:var(--blue)]">
-              <div className="flex justify-between w-full items-end md:gap-10">
-                <h1 className="text-2xl md:text-4xl uppercase font-semibold">
-                  BSEB
-                </h1>
-                <p>2016-2017</p>
+           <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 z-20">
+              <div className="flex items-center gap-3 mb-2">
+                 <div className="h-0.5 w-12 bg-blue-500" />
+                 <span className="text-white/60 uppercase tracking-widest text-xs font-bold">Current Focus</span>
               </div>
-              <p className="font-semibold">Bihar, India</p>
-              <p className="text-sm md:text-lg">Matriculation</p>
-            </div>
-          </div>
-        </div>
-        {/* Experience */}
-        <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 border-2 border-black">
-          <div className="bg-neutral-800 p-1 rounded-md w-28 text-center text-white">
-            Experience
-          </div>
-          {/* Intern */}
-          <div className="flex w-full flex-col text-[color:var(--blue)]">
-            <div className="flex justify-between w-full items-end md:gap-10">
-              <h1 className="text-2xl md:text-4xl uppercase font-semibold">
-                Tech Explica <span className="text-sm md:text-lg">(Intern)</span>
-              </h1>
-              <p>2020</p>
-            </div>
-            <p className="font-semibold">New Delhi, India</p>
-            <p className="text-sm md:text-lg">Python With Machine Learning (45 Days)</p>
-          </div>
-          <div className="bg-neutral-800 p-1 rounded-md w-24 text-center text-white">
-            Subjects
-          </div>
-          <div className="flex w-full flex-col text-[color:var(--blue)]">
-            <p>
-              Data Structures <br /> Algorithm <br /> Theory of Computation{" "}
-              <br /> Compiler Design <br />
-              Computer Networks <br /> Operating System <br />
-              Digital Logic <br /> Discrete Mathematics <br />C programming{" "}
-              <br />
-              Database management system <br /> Computer org & arch
-            </p>
-          </div>
-        </div>
-      </div>
+              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tighter uppercase italic">
+                 Retrieval Augmented <br/> Generation
+              </h2>
+           </div>
+        </motion.div>
 
-      {/* cerfication */}
-      <div className="bg-[#D9D9D9] md:p-10 p-4 rounded-3xl w-full flex flex-col gap-5 md:mb-7 border-2 border-black">
-        <div className="bg-neutral-800 p-1 rounded-md w-28 text-center text-white">
-          Certification
+        {/* Education & Achievements Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+           
+           {/* Education Column */}
+           <div className="space-y-8">
+              <div className="flex items-center gap-3 mb-6">
+                 <FaUniversity className="text-blue-500 text-xl" />
+                 <h3 className="text-xl font-black text-neutral-900 dark:text-white uppercase tracking-tighter">Education</h3>
+              </div>
+
+              <div className="space-y-6">
+                 {[
+                    { title: "M.Tech in Math & Computing", inst: "IIT Patna", year: "2024 - 2026", score: "85%" },
+                    { title: "B.E. Computer Science", inst: "Vels University", year: "2021 - 2024", score: "76%" },
+                    { title: "Diploma in CSE", inst: "BTE Delhi", year: "2017 - 2020", score: "" },
+                 ].map((edu, i) => (
+                   <div key={i} className="group border-l-2 border-neutral-200 dark:border-neutral-800 pl-6 py-2 hover:border-blue-500 transition-colors">
+                      <div className="flex justify-between items-start mb-1">
+                         <h4 className="text-lg font-bold text-neutral-900 dark:text-white leading-none group-hover:text-blue-600 transition-colors">{edu.inst}</h4>
+                         <span className="text-xs font-mono text-neutral-500">{edu.year}</span>
+                      </div>
+                      <p className="text-sm text-neutral-600 dark:text-neutral-400 font-medium mb-1">{edu.title}</p>
+                      {edu.score && <span className="text-[10px] font-bold bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded text-neutral-500">{edu.score}</span>}
+                   </div>
+                 ))}
+              </div>
+           </div>
+
+           {/* Achievements Column */}
+           <div className="space-y-8">
+              <div className="flex items-center gap-3 mb-6">
+                 <FaTrophy className="text-orange-500 text-xl" />
+                 <h3 className="text-xl font-black text-neutral-900 dark:text-white uppercase tracking-tighter">Honors</h3>
+              </div>
+
+               <div className="grid grid-cols-1 gap-4">
+                  <div className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl flex items-center justify-between group hover:border-orange-500/50 transition-colors">
+                     <div>
+                        <h4 className="font-black text-neutral-900 dark:text-white uppercase tracking-tight text-lg">GATE CS 2024</h4>
+                        <p className="text-xs font-bold text-neutral-500 uppercase tracking-widest mt-1">95th Percentile</p>
+                     </div>
+                     <span className="text-2xl">🏆</span>
+                  </div>
+
+                  <div className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl flex items-center justify-between group hover:border-blue-500/50 transition-colors">
+                     <div>
+                        <h4 className="font-black text-neutral-900 dark:text-white uppercase tracking-tight text-lg">LeetCode 600+</h4>
+                        <Link href="https://leetcode.com/u/mkarimi/" target="_blank" className="flex items-center gap-1 text-xs font-bold text-blue-600 uppercase tracking-widest mt-1 hover:underline">
+                           mkarimi <FaExternalLinkAlt size={8} />
+                        </Link>
+                     </div>
+                     <span className="text-2xl">💻</span>
+                  </div>
+
+                  <div className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl flex items-center justify-between group">
+                     <div>
+                        <h4 className="font-black text-neutral-900 dark:text-white uppercase tracking-tight text-lg">AIR 43</h4>
+                        <p className="text-xs font-bold text-neutral-500 uppercase tracking-widest mt-1">MANUU Polytechnic 2017</p>
+                     </div>
+                     <span className="text-2xl">🏅</span>
+                  </div>
+               </div>
+           </div>
         </div>
-        <div className="flex w-full flex-col text-[color:var(--blue)] gap-7">
-          {/* Coding contest */}
-          <div>
-            <div className="flex justify-between w-full items-end">
-              <h1 className="uppercase font-semibold">
-                Spring 2024 Battle of the Brains Coding Contest
-              </h1>
-              <p>2024</p>
-            </div>
-            <Link
-              href="https://drive.google.com/file/d/1iPxzHkbYzF92EKykmd6F2KC__pRZyaIV/view?usp=sharing"
-              target="_blank"
-            >
-              <p className="underline">University of Texas, Dallas</p>
-            </Link>
-          </div>
-          {/* automation anywhere */}
-          <div>
-            <div className="flex justify-between w-full items-end">
-              <h1 className="uppercase font-semibold">
-                Automation Anywhere RPA Essentials for Students (Automation 360)
-              </h1>
-              <p>2022</p>
-            </div>
-            <Link
-              href="https://certificates.automationanywhere.com/5d0c4ff3-529d-4d1e-8bac-284d9b933a02"
-              target="_blank"
-            >
-              <p className="underline">Automation Anywhere</p>
-            </Link>
-          </div>
-          {/* microsoft */}
-          <div>
-            <div className="flex justify-between w-full items-end">
-              <h1 className="uppercase font-semibold">
-                Microsoft Certified: Azure Data Fundamentals
-              </h1>
-              <p>2022</p>
-            </div>
-            <Link
-              href="https://www.credly.com/badges/60697819-5da1-4135-9496-ac0299186bad/linked_in_profile"
-              target="_blank"
-            >
-              <p className="underline">Microsoft</p>
-            </Link>
-          </div>
-          {/* celonis */}
-          <div>
-            <div className="flex justify-between w-full items-end">
-              <h1 className="uppercase font-semibold">
-                Process Automation Bootcamp
-              </h1>
-              <p>2022</p>
-            </div>
-            <Link
-              href="https://www.credly.com/badges/53cd4a20-d050-4fc8-9073-1b41d4a01de0/linked_in_profile"
-              target="_blank"
-            >
-              <p className="underline">Celonis</p>
-            </Link>
-          </div>
-          {/*Learnathon*/}
-          <div>
-            <div className="flex justify-between w-full items-end">
-              <h1 className="uppercase font-semibold">LEARNATHON 2022</h1>
-              <p>2022</p>
-            </div>
-            <Link
-              href="https://drive.google.com/file/d/16BmovpCSwqP6jW1EMha6NFUpEHcw9vUc/view"
-              target="_blank"
-            >
-              <p className="underline">ICT Academy</p>
-            </Link>
-          </div>
-          {/* hackerrank pyhton*/}
-          <div>
-            <div className="flex justify-between w-full items-end">
-              <h1 className="uppercase font-semibold">Python (Basic)</h1>
-              <p>2022</p>
-            </div>
-            <Link
-              href="https://www.hackerrank.com/certificates/31128d542756"
-              target="_blank"
-            >
-              <p className="underline">Hackerrank</p>
-            </Link>
-          </div>
-          {/* hackerrank problem solving */}
-          <div>
-            <div className="flex justify-between w-full items-end">
-              <h1 className="uppercase font-semibold">
-                Problem Solving (Basic)
-              </h1>
-              <p>2021</p>
-            </div>
-            <Link
-              href="https://www.hackerrank.com/certificates/ffe35cd73917"
-              target="_blank"
-            >
-              <p className="underline">Hackerrank</p>
-            </Link>
-          </div>
+
+        {/* Core Coursework Section */}
+        <div className="mb-20">
+             <div className="flex items-center gap-3 mb-6">
+                 <FaLightbulb className="text-yellow-500 text-xl" />
+                 <h3 className="text-xl font-black text-neutral-900 dark:text-white uppercase tracking-tighter">Core Coursework</h3>
+             </div>
+             <div className="flex flex-wrap gap-3">
+                {["Large Language Models (LLMs)", "Deep Learning", "Advanced Algorithms", "Pattern Recognition", "Database Systems (DBMS)", "Operating Systems", "Probability & Stats", "Prompt Engineering", "System Design"].map((subject, i) => (
+                    <span key={i} className="px-4 py-2 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 shadow-sm">
+                        {subject}
+                    </span>
+                ))}
+             </div>
         </div>
-      </div>
-      {/* contact section */}
+
+        {/* Certifications Section */}
+        <div className="mb-20">
+           <div className="flex items-center gap-3 mb-8">
+               <FaCertificate className="text-emerald-500 text-xl" />
+               <h3 className="text-xl font-black text-neutral-900 dark:text-white uppercase tracking-tighter">Certifications</h3>
+           </div>
+           
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                  { title: "Azure Data", org: "Microsoft" },
+                  { title: "RPA Essentials", org: "Automation Anywhere" },
+                  { title: "Process Automation", org: "Celonis" },
+                  { title: "Python Basic", org: "HackerRank" },
+              ].map((cert, i) => (
+                 <div key={i} className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-5 rounded-xl hover:shadow-lg transition-shadow">
+                    <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-2">{cert.org}</p>
+                    <h5 className="font-bold text-neutral-800 dark:text-neutral-200 leading-tight">{cert.title}</h5>
+                 </div>
+              ))}
+           </div>
+        </div>
+
+      </main>
+      
       <Footer />
-    </main>
+    </div>
   );
 };
 
