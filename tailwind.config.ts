@@ -36,6 +36,7 @@ const config: Config = {
     },
   },
   plugins: [
+    require("@tailwindcss/typography"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google"; // Modern, tech-focused font
 import Head from "next/head";
 import "./globals.css";
 import localFont from "next/font/local";
 import NextTopLoader from "nextjs-toploader";
 import AIAssistant from "../components/ai-assistant";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] }); // Primary font
 const myFont = localFont({
   src: "../../font/CalSans-SemiBold.woff2",
 });
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={myFont.className}>
+      <body className={outfit.className}>
         <NextTopLoader />
         {children}
         <AIAssistant />
