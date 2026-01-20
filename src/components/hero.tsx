@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
         >
           <div className="flex flex-col items-center gap-2">
              <h2 className="text-xs md:text-sm font-bold tracking-[0.3em] text-neutral-500 dark:text-neutral-400">
-               Hi, I'm
+               Hi, I&apos;m
              </h2>
              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-neutral-800 dark:text-white tracking-tighter mix-blend-multiply dark:mix-blend-normal">
                Muzammil <span className="text-neutral-400 dark:text-neutral-600">Karimi</span>
