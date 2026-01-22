@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                <Link href="https://github.com/muzammilkarimi" target="_blank" className="p-4 bg-white/5 rounded-full text-white hover:bg-neutral-700 transition-colors">
                   <GitHub fontSize="small" />
                </Link>
-               <Link href="https://instagram.com/muzammil_karimi" target="_blank" className="p-4 bg-white/5 rounded-full text-white hover:bg-pink-600 transition-colors">
+               <Link href="https://www.instagram.com/muzammilkarimiiiii" target="_blank" className="p-4 bg-white/5 rounded-full text-white hover:bg-pink-600 transition-colors">
                   <Instagram fontSize="small" />
                </Link>
             </div>

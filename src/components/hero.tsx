@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
                  <LinkedIn fontSize="small" />
               </Link>
               <div className="w-[1px] h-4 bg-neutral-300 dark:bg-neutral-700" />
-              <Link href="https://instagram.com/muzammil_karimi" target="_blank" className="p-2 text-neutral-600 hover:text-pink-600 dark:text-neutral-400 dark:hover:text-pink-500 transition-colors">
+              <Link href="https://www.instagram.com/muzammilkarimiiiii" target="_blank" className="p-2 text-neutral-600 hover:text-pink-600 dark:text-neutral-400 dark:hover:text-pink-500 transition-colors">
                  <Instagram fontSize="small" />
               </Link>
               <div className="w-[1px] h-4 bg-neutral-300 dark:bg-neutral-700" />

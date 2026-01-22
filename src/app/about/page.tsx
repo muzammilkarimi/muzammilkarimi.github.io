@@ -75,8 +75,8 @@ const About: React.FC = () => {
 
               <div className="space-y-6">
                  {[
-                    { title: "M.Tech in Math & Computing", inst: "IIT Patna", year: "2024 - 2026", score: "85%" },
-                    { title: "B.E. Computer Science", inst: "Vels University", year: "2021 - 2024", score: "76%" },
+                    { title: "M.Tech in Math & Computing", inst: "IIT Patna", year: "2024 - 2026", score: "" },
+                    { title: "B.E. Computer Science", inst: "Vels University", year: "2021 - 2024", score: "" },
                     { title: "Diploma in CSE", inst: "BTE Delhi", year: "2017 - 2020", score: "" },
                  ].map((edu, i) => (
                    <div key={i} className="group border-l-2 border-neutral-200 dark:border-neutral-800 pl-6 py-2 hover:border-blue-500 transition-colors">

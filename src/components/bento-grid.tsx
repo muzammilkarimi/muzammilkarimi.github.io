@@ -43,7 +43,7 @@ const BentoGrid: React.FC = () => {
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-neutral-900 dark:text-white leading-[0.9]">
             ENGINEER <br />
-            <span className="text-neutral-400">MATH & COMP</span>
+            <span className="text-neutral-400">COMP & MATH</span>
           </h2>
         </div>
 
